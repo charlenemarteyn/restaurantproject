@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid template exercises</title>
+    <style>
+        body {
+            max-width: 1285px;
+            max-height: inherit;
+            margin: 0;
+            padding: 0;
+        }
+
+        .top {
+            background-image: url(background.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center center;
+            background-attachment: fixed;
+            width: auto;
+            height: 300px;
+            margin: 0px;
+            grid-area: ht;
+        }
+
+        header,
+        nav,
+        aside,
+        article {
+            border: 1px solid;
+            padding: .5em;
+        }
+
+        .title {
+            color: #fff;
+            margin: 0;
+            text-align: center;
+            margin-top: 80px;
+            font-size: 5.8em;
+            font-family: "avenir";
+        }
+
+        main {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-template-areas:
+                "ht ht ht ht"
+                "na na na na"
+                "sect0 sect0 sect0 as"
+                "sect1 sect1 sect1 as"
+                "sect2 sect2 sect2 as"
+                "sect3 sect3 sect3 as"
+                "sect4 sect4 sect4 as";
+            grid-gap: 10px;
+        }
+
+        nav {
+            grid-area: na;
+            font-size: 1.2em;
+            font-family: "Avenir";
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+            padding-bottom: 0.1em;
+            margin-left: 10em;
+        }
+
+        .starter {
+            grid-area: sect0;
+            display: grid;
+            grid-template-columns: 275px 275px 275px;
+            grid-template-rows: 60px 350px;
+            grid-template-areas:
+                "h1 h1 h1"
+                "ar0 ar1 ar2";
+            grid-gap: 24px 24px;
+            padding: 2.5em;
+            border: 1px solid;
+        }
+
+        .maindish {
+            grid-area: sect1;
+            display: grid;
+            grid-template-columns: 275px 275px 275px;
+            grid-template-rows: 60px 350px;
+            grid-template-areas:
+                "h1 h1 h1"
+                "ar0 ar1 ar2";
+            grid-gap: 24px 24px;
+            padding: 2.5em;
+            border: 1px solid;
+        }
+
+        .dessert {
+            grid-area: sect2;
+            display: grid;
+            grid-template-columns: 275px 275px 275px;
+            grid-template-rows: 60px 350px;
+            grid-template-areas:
+                "h1 h1 h1"
+                "ar0 ar1 ar2";
+            grid-gap: 24px 24px;
+            padding: 2.5em;
+            border: 1px solid;
+        }
+
+        .side {
+            grid-area: sect3;
+            display: grid;
+            grid-template-columns: 275px 275px 275px;
+            grid-template-rows: 60px 350px;
+            grid-template-areas:
+                "h1 h1 h1"
+                "ar0 ar1 ar2";
+            grid-gap: 24px 24px;
+            padding: 2.5em;
+            border: 1px solid;
+        }
+
+        .drinks {
+            grid-area: sect4;
+            display: grid;
+            grid-template-columns: 275px 275px 275px;
+            grid-template-rows: 60px 350px;
+            grid-template-areas:
+                "h1 h1 h1"
+                "ar0 ar1 ar2"
+                "ar4 . .";
+            grid-gap: 24px 24px;
+            padding: 2.5em;
+            border: 1px solid;
+        }
+
+        .soldout{
+            background-color:rgba(0,0,0,.4);
+            width:275px;
+            height:350px;
+            z-index:20;
+            position:absolute;
+            margin:-9px;
+            filter: blur(1.5px);
+}
+        }
+
+        aside {
+            grid-area: as;
+        }
+
+        h1 {
+            font-family: "Avenir";
+            grid-area: h1;
+            font-size: 3em;
+            margin: 0;
+        }
+
+        h2 {
+            font-family: "Avenir";
+            grid-area: h2;
+            font-size: 1.2em;
+            margin: 0;
+            text-align: center;
+        }
+
+        h3 {
+            font-family: "Avenir";
+            font-size: .8em;
+            margin: 0;
+            text-align: center;
+        }
+
+        .ar0 {
+            grid-area: ar0;
+        }
+
+        .ar1 {
+            grid-area: ar1;
+            background-image: url(blog.jpg);
+        }
+
+        .ar2 {
+            grid-area: ar2;
+            background-image: url(portfolio.jpg);
+        }
+
+        .ar3 {
+            grid-area: ar3;
+        }
+
+        .ar4 {
+            grid-area: ar4;
+            background-image: url(autre1.jpg);
+        }
+
+        .ar5 {
+            grid-area: ar5;
+            background-image: url(autre2.jpg);
+        }
+
+        .ar6 {
+            grid-area: ar6;
+            background-image: url(autre3.jpg);
+        }
+
+        .ar7 {
+            grid-area: ar7;
+            background-image: url(autre4.jpg);
+        }
+
+        li {
+            font-family: "Avenir";
+        }
+
+        div {
+            width: 200.5px;
+            height: 156px;
+        }
+
+        .borderline:hover {
+            border-bottom: 1px solid black;
+        }
+
+        a[href="#"] {
+            border-bottom: 1px solid #fff;
+            font-weight: bold;
+            border-bottom: 1px solid black;
+        }
+
+
+        img{
+            width:200px;
+            height:134px;
+            padding-left: 28px;
+            position: relative;
+            filter: grayscale(1);
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <header class="top">
+            <h1 class="title">Petrograd restaurant</h1>
+        </header>
+        <nav>
+            <a class="borderline" href="">Home</a>
+            <a href="#">Menu</a>
+            <a class="borderline" href="">Contact</a>
+        </nav>
+
+        <section class="starter">
+            <h1>Starter</h1>
+
+            <article class="ar0"><div class="soldout">
+                <h2>Russian Ring bread</h2>
+                <h3>Karapatien</h3>
+                <img src="small/ringbroed-druer-sm.jpg" alt="Russian Ring bread">
+                <p>Russisk ringbrød efter en klassisk opskrift fra Karapatien. Dejen blandes koldhæver 30 dage, inde brødet bages over bål. Meget sprødt, godt med Karapatisk bjerggedsmør.</p>
+                <p>20 000kr</p></div>
+            </article>
+        </section>
+
+        <section class="maindish">
+            <h1>Main dishes</h1>
+            <article class="ar0"></article>
+            <article class="ar1"></article>
+        </section>
+
+        <section class="dessert">
+            <h1>Dessert</h1>
+            <article class="ar0"></article>
+            <article class="ar1"></article>
+        </section>
+
+        <section class="side">
+            <h1>Side dishes</h1>
+            <article class="ar0"></article>
+            <article class="ar1"></article>
+        </section>
+
+        <section class="drinks">
+            <h1>Drinks</h1>
+            <article class="ar0"></article>
+        </section>
+
+        <aside>
+            <h2>Practical information</h2>
+            <p>
+                <li>Make one site with a global menu</li>
+                <li>Make one subpage for each layout (exercise 1 and 2)</li>
+                <li>Use internal CSS on each page</li>
+                <li>Make your own grid layout on the frontpage</li>
+            </p>
+        </aside>
+    </main>
+</body>
+</html>

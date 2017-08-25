@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The blog</title>
+    <style>
+        header, section, aside, footer, nav{
+        border: 1px solid;
+        padding:.5em;
+        }
+    body{
+            max-width: 1285px;
+            max-height: inherit;
+            margin: 0;
+            padding: 0;
+            }
+
+        @media(min-width: 600px){
+         main{
+            display:grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-areas:
+                 "ht ht ht"
+                 "na na na"
+                 "di di di"
+                 "hd hd hd"
+                 "sec sec as"
+                 "ft ft ft";
+             grid-gap:20px 10px;
+        }
+        div{
+            grid-area: di;
+            }
+
+        header{
+            grid-area: hd;
+            }
+
+        section{
+            grid-area: sec;
+            }
+
+        aside{
+            grid-area: as;
+            }
+
+        footer{
+            grid-area: ft;
+            }
+
+        a:hover{
+            border-bottom:1px solid black;
+            }
+
+        nav{
+            grid-area: na;
+            font-size:1.2em;
+            font-family: "Avenir";
+            text-align: center;
+            }
+
+        a{
+            text-decoration:none;
+            color:black;
+            padding-bottom:0.1em;
+         }
+
+        .top{
+                background-image: url(background.jpg);
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center center;
+                background-attachment: fixed;
+                width:auto;
+                height:300px;
+                margin:0px;
+                grid-area: ht;
+            }
+
+        h1{
+            grid-area: h1;
+            color: #fff;
+            margin:0;
+            text-align: center;
+            margin-top: 80px;
+            font-size:5.8em;
+            font-family: "avenir";
+        }
+
+        h2{
+            font-family: "Avenir";
+            font-size:3em;
+        }
+
+
+    </style>
+</head>
+
+<body>
+    <main>
+        <header class="top">
+            <h1>Grid template exercises</h1>
+        </header>
+        <nav>
+            <a href="http://charlene-marteyn.dk/secondsemester/gridexercise/frontpage.html">Go back to front page</a>
+        </nav>
+    <div><h2>The blog template</h2></div>
+    <header>Header is here</header>
+    <section>The content must be here</section>
+    <aside>the Side bar is here</aside>
+    <footer>The footer is here</footer>
+
+
+    </main>
+
+
+</body>
+</html>

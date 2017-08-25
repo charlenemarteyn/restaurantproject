@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid template exercises</title>
+    <style>
+
+        body{
+            max-width: 1285px;
+            max-height: inherit;
+            margin: 0;
+            padding: 0;
+            }
+
+        .top{
+            background-image: url(background.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center center;
+            background-attachment: fixed;
+            width:auto;
+            height:300px;
+            margin:0px;
+            grid-area: ht;
+        }
+
+        header, nav, aside{
+            border: 1px solid;
+            padding:.5em;
+        }
+
+        h1{
+            grid-area: h1;
+            color: #fff;
+            margin:0;
+            text-align: center;
+            margin-top: 80px;
+            font-size:5.8em;
+            font-family: "avenir";
+        }
+
+        @media(min-width: 600px){
+         main{
+            display:grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-template-areas:
+                 "ht ht ht ht"
+                 "na na na na"
+                 "as sect sect sect";
+             grid-gap:10px;
+        }
+
+        nav{
+            grid-area: na;
+            font-size:1.2em;
+            font-family: "Avenir";
+            }
+
+        a{
+            text-decoration:none;
+            color:black;
+            padding-bottom:0.1em;
+            margin-left: 10em;
+         }
+
+            section{
+                grid-area: sect;
+                display: grid;
+                grid-template-columns: 200.5px 200.5px 200.5px 200.5px;
+                grid-template-rows: 60px 156px 156px 5px;
+                grid-template-areas:
+                    "h2 h2 h2 h2"
+                    "ar0 ar1 ar2 ar3"
+                    "ar4 ar5 ar6 ar7";
+                grid-gap:24px 24px;
+                padding:2.5em;
+                border: 1px solid;
+            }
+
+            aside{
+                grid-area: as;
+            }
+
+            h2{
+                font-family:"Avenir";
+                grid-area: h2;
+            }
+
+            .ar0{
+                grid-area: ar0;
+                background-image: url(intropage.jpg);
+            }
+
+
+            .ar1{
+                grid-area:ar1;
+                background-image: url(blog.jpg);
+
+
+            }
+
+            .ar2{
+                grid-area: ar2;
+                background-image: url(portfolio.jpg);
+
+
+
+            }
+            .ar3{
+                grid-area: ar3;
+                background-image: url(goldenratio.jpg);
+
+
+            }
+
+            .ar4{
+                grid-area:ar4;
+                background-image: url(autre1.jpg);
+
+            }
+
+            .ar5{
+                grid-area: ar5;
+                background-image:url(autre2.jpg);
+
+            }
+            .ar6{
+                grid-area: ar6;
+                background-image:url(autre3.jpg);
+            }
+
+            .ar7{
+                grid-area:ar7;
+                background-image:url(autre4.jpg);
+            }
+
+            li{
+                font-family:"Avenir";
+            }
+
+            div{
+                width:200.5px;
+                height:156px;
+            }
+
+            .borderline:hover{
+                border-bottom:1px solid black;
+            }
+
+            a[href="#"]{
+                border-bottom:1px solid #fff;
+                font-weight: bold;
+                border-bottom:1px solid black;
+                }
+
+
+    </style>
+</head>
+
+<body>
+    <main>
+        <header class="top">
+            <h1>Grid template exercises</h1>
+        </header>
+        <nav>
+            <a href="#">Home</a>
+            <a class="borderline" href="http://charlene-marteyn.dk/secondsemester/gridexercise/standard.html">“standard” grid layouts</a>
+            <a class="borderline" href="http://charlene-marteyn.dk/secondsemester/gridexercise/lw.html">Luke Wroblewski’s RWD layout</a>
+        </nav>
+        <section>
+        <h2>Templates</h2>
+            <article class="ar0"><a href="http://charlene-marteyn.dk/secondsemester/gridexercise/introgrids.html"><div></div></a></article>
+            <article class="ar1"><a href="http://charlene-marteyn.dk/secondsemester/gridexercise/bloggrid.html"><div></div></a></article>
+        <article class="ar2"><a href="http://charlene-marteyn.dk/secondsemester/gridexercise/portfoliogrid.html"><div></div></a></article>
+        <article class="ar3"><a href="http://charlene-marteyn.dk/secondsemester/gridexercise/goldenratiogrid.html"><div></div></a></article>
+        <article class="ar4"><a href="http://charlene-marteyn.dk/secondsemester/gridexercise/autre1.html"><div></div></a></article>
+        <article class="ar5"><a href="http://charlene-marteyn.dk/secondsemester/gridexercise/autre2.html"><div></div></a></article>
+        <article class="ar6"><a href="http://charlene-marteyn.dk/secondsemester/gridexercise/autre3.html"><div></div></a></article>
+        <article class="ar7"><a href="http://charlene-marteyn.dk/secondsemester/gridexercise/autre4.html"><div></div></a></article>
+
+        </section>
+        <aside>
+            <h2>Requierements</h2>
+            <p><li>Make one site with a global menu</li>
+                <li>Make one subpage for each layout (exercise 1 and 2)</li>
+                <li>Use internal CSS on each page</li>
+                <li>Make your own grid layout on the frontpage</li></p>
+
+        </aside>
+    </main>
+
+
+</body>
+</html>

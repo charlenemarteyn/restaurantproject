@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid area</title>
+    <style>
+        header, nav, section, aside, footer, article{
+            border: 1px solid;
+            padding:.5em;
+        }
+
+        @media(min-width: 600px){
+         main{
+            display:grid;
+            grid-template-columns: 1fr 4fr 1fr;
+            grid-template-areas:
+                 "hd hd hd"
+                 "nav nav nav"
+                 "sect sect as"
+                 ". ft .";
+             grid-gap:5px;
+        }
+
+        header{
+            grid-area: hd;
+        }
+
+        nav{
+            grid-area: nav;
+        }
+
+        section{
+            grid-area: sect;
+        }
+
+        aside{
+            grid-area: as;
+        }
+
+        footer{
+            grid-area: ft;
+        }
+
+        }
+
+    </style>
+</head>
+
+<body>
+    <main>
+        <header>
+            <h1>Site header does here</h1>
+        </header>
+        <nav>
+            <a href="">Home</a>
+            <a href="">Products</a>
+            <a href="">About</a>
+            <a href="">Contact</a>
+        </nav>
+        <section>
+        <h2>Portfolio
+            </h2>
+        <article><p>Article content</p></article>
+        </section>
+        <aside> Some extra information would go here</aside>
+        <footer>Footer here</footer>
+
+
+
+
+    </main>
+
+</body>
+</html>

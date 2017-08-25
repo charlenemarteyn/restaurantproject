@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The golden ratio</title>
+    <style>
+    section, aside, nav, div{
+            border: 1px solid;
+            padding:.5em;
+        }
+
+    body{
+            max-width: 1285px;
+            max-height: inherit;
+            margin: 0;
+            padding: 0;
+            }
+
+    @media(min-width: 600px){
+         main{
+            display:grid;
+            grid-template-columns: repeat (8, 1fr);
+            grid-template-areas:
+                 "ht ht ht ht ht ht ht ht"
+                 "na na na na na na na na"
+                 "di di di di di di di di"
+                 "sec sec sec sec sec as as as";
+             grid-gap:20px 10px;
+        }
+
+        div{
+            grid-area: di;
+            font-family: "Avenir";
+        }
+
+        section{
+            grid-area: sec;
+            font-family: "Avenir";
+        }
+
+        aside{
+            grid-area:as;
+            font-family: "Avenir";
+        }
+
+
+        a:hover{
+                border-bottom:1px solid black;
+                }
+
+        nav{
+            grid-area: na;
+            font-size:1.2em;
+            font-family: "Avenir";
+            text-align: center;
+            }
+
+        a{
+            text-decoration:none;
+            color:black;
+            padding-bottom:0.1em;
+         }
+
+        .top{
+                background-image: url(background.jpg);
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center center;
+                background-attachment: fixed;
+                width:auto;
+                height:300px;
+                margin:0px;
+                grid-area: ht;
+            }
+
+        h1{
+            grid-area: h1;
+            color: #fff;
+            margin:0;
+            text-align: center;
+            margin-top: 80px;
+            font-size:5.8em;
+            font-family: "avenir";
+        }
+
+        h2{
+            font-family: "Avenir";
+            font-size:3em;
+        }
+
+    </style>
+
+</head>
+
+<body>
+    <main>
+
+    <header class="top">
+            <h1>Grid template exercises</h1>
+        </header>
+        <nav>
+            <a href="http://charlene-marteyn.dk/secondsemester/gridexercise/frontpage.html">Go back to front page</a>
+        </nav>
+
+    <div><h2>The golden ration template</h2></div>
+    <section>This is one column</section>
+    <aside>This is the other column</aside>
+    </main>
+</body>
+</html>

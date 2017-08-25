@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio template</title>
+    <style>
+    aside, nav, article, footer{
+            border: 1px solid;
+            padding:.5em;
+        }
+
+        body{
+            max-width: 1285px;
+            max-height: inherit;
+            margin: 0;
+            padding: 0;
+            }
+
+        @media(min-width: 600px){
+         main{
+            display:grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-areas:
+                 "ht ht ht"
+                 "naa naa naa"
+                 "di di di"
+                 "as nav nav"
+                 "sec sec sec"
+                 "ft ft ft";
+             grid-gap:20px 10px;
+        }
+
+            div{
+                grid-area: di;
+            }
+
+            aside{
+            grid-area: as;
+            }
+
+            nav{
+                grid-area: nav;
+            }
+
+            section{
+                grid-area: sec;
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr 1fr;
+                grid-template-areas:
+                    "ar0 ar1 ar2 ar3"
+                    "ar4 ar5 ar6 ar7"
+                    "ar8 ar9 ar10 ar11";
+
+                grid-gap:20px 10px;
+            }
+
+            footer{
+                grid-area: ft;
+            }
+
+            .ar0{
+                grid-area: ar0;
+            }
+
+            .ar1{
+                grid-area:ar1;
+            }
+
+            .ar2{
+                grid-area: ar2;
+            }
+            .ar3{
+                grid-area: ar3;
+            }
+
+            .ar4{
+                grid-area:ar4;
+            }
+
+            .ar5{
+                grid-area: ar5;
+            }
+            .ar6{
+                grid-area: ar6;
+            }
+
+            .ar7{
+                grid-area:ar7;
+            }
+
+            .ar8{
+                grid-area: ar8;
+            }
+            .ar9{
+                grid-area: ar9;
+            }
+
+            .ar10{
+                grid-area:ar10;
+            }
+
+            .ar11{
+                grid-area:ar11;
+            }
+
+        .realnav a:hover{
+                border-bottom:1px solid black;
+                }
+
+        .realnav a[href="#"]{
+                border-bottom:1px solid #fff;
+                font-weight: bold;
+                border-bottom:1px solid black;
+                }
+
+        .realnav{
+            grid-area: naa;
+            font-size:1.2em;
+            font-family: "Avenir";
+            text-align: center;
+            }
+
+        .realnav a{
+            text-decoration:none;
+            color:black;
+            padding-bottom:0.1em;
+         }
+
+        .top{
+                background-image: url(background.jpg);
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center center;
+                background-attachment: fixed;
+                width:auto;
+                height:300px;
+                margin:0px;
+                grid-area: ht;
+            }
+
+        h1{
+            grid-area: h1;
+            color: #fff;
+            margin:0;
+            text-align: center;
+            margin-top: 80px;
+            font-size:5.8em;
+            font-family: "avenir";
+        }
+
+        h2{
+            font-family: "Avenir";
+            font-size:3em;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <header class="top">
+            <h1>Grid template exercises</h1>
+        </header>
+        <nav class="realnav">
+            <a href="http://charlene-marteyn.dk/secondsemester/gridexercise/frontpage.html">Go back to front page</a>
+        </nav>
+
+    <div><h2>The portfolio template</h2></div>
+    <aside>The logo is here</aside>
+    <nav>
+        <a href="">Home</a>
+        <a href="">Products</a>
+        <a href="">About</a>
+        <a href="">Contact</a>
+        </nav>
+    <section>
+        <article class="ar0">project 1</article>
+        <article class="ar1">project 2</article>
+        <article class="ar2">project 3</article>
+        <article class="ar3">project 4</article>
+        <article class="ar4">project 5</article>
+        <article class="ar5">project 6</article>
+        <article class="ar6">project 7</article>
+        <article class="ar7">Project 8</article>
+        <article class="ar8">Project 9</article>
+        <article class="ar9">Project 10</article>
+        <article class="art10">Project 11</article>
+        <article class="art11">Project 12</article>
+    </section>
+    <footer>The footer is here</footer>
+
+
+
+    </main>
+
+</body>
+</html>

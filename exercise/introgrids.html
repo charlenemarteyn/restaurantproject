@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The intro page</title>
+    <style>
+        aside, nav, header, article, footer{
+            border: 1px solid;
+            padding:.5em;
+        }
+
+        body{
+            max-width: 1285px;
+            max-height: inherit;
+            margin: 0;
+            padding: 0;
+            }
+
+        @media(min-width: 600px){
+         main{
+            display:grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-areas:
+                 "ht ht ht"
+                 "naa naa naa"
+                 "di di di"
+                 "as nav nav"
+                 "hd hd hd"
+                 "sec sec sec"
+                 "ft ft ft";
+             grid-gap:20px 10px;
+        }
+
+            div{
+                grid-area: di;
+            }
+            aside{
+            grid-area: as;
+            }
+
+            nav{
+                grid-area: nav;
+            }
+
+            header{
+                grid-area: hd;
+            }
+
+            section{
+                grid-area: sec;
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                grid-template-areas:
+                    "ar ar1 ar2";
+                grid-gap:10px;
+            }
+
+            footer{
+                grid-area: ft;
+            }
+
+            .article0{
+                grid-area: ar;
+            }
+
+            .article1{
+                grid-area:ar1;
+            }
+
+            .article2{
+                grid-area: ar2;
+            }
+    .realnav a:hover{
+                border-bottom:1px solid black;
+                }
+
+        .realnav a[href="#"]{
+                border-bottom:1px solid #fff;
+                font-weight: bold;
+                border-bottom:1px solid black;
+                }
+
+        .realnav{
+            grid-area: naa;
+            font-size:1.2em;
+            font-family: "Avenir";
+            text-align: center;
+            }
+
+        .realnav a{
+            text-decoration:none;
+            color:black;
+            padding-bottom:0.1em;
+         }
+
+        .top{
+                background-image: url(background.jpg);
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center center;
+                background-attachment: fixed;
+                width:auto;
+                height:300px;
+                margin:0px;
+                grid-area: ht;
+            }
+
+        h1{
+            grid-area: h1;
+            color: #fff;
+            margin:0;
+            text-align: center;
+            margin-top: 80px;
+            font-size:5.8em;
+            font-family: "avenir";
+        }
+
+        h2{
+            font-family: "Avenir";
+            font-size:3em;
+        }
+
+
+
+
+    </style>
+</head>
+
+<body>
+<main>
+    <header class="top">
+            <h1>Grid template exercises</h1>
+        </header>
+        <nav class="realnav">
+            <a href="http://charlene-marteyn.dk/secondsemester/gridexercise/frontpage.html">Go back to front page</a>
+        </nav>
+    <div><h2>The intro page</h2></div>
+    <aside>Logo is here</aside>
+    <nav>
+        <a href="">Home</a>
+        <a href="">Products</a>
+        <a href="">About</a>
+        <a href="">Contact</a>
+    </nav>
+
+    <header>Carousel is here</header>
+
+    <section>
+    <article class="article0">Feature 1</article>
+    <article class="article1">Feature 2</article>
+    <article class="article2">Feature 3</article>
+    </section>
+
+    <footer>Footer is here</footer>
+
+
+
+
+
+
+    </main>
+
+</body>
+</html>
